@@ -59,7 +59,8 @@ main {
   padding: 0 50px;
   display: grid;
   width: 70%;
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
   gap: 30px;
   grid-auto-rows: minmax(300px, auto);
   text-align: center;
@@ -78,6 +79,7 @@ img:hover {
 }
 
 main a {
+  display: inline-block;
   font-size: 30px;
   text-decoration: none;
   color: black;
