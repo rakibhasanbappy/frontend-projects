@@ -7,23 +7,16 @@ body {
 }
 
 header {
-  z-index: 1;
-  position: fixed;
-  width: 100%;
-  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: aquamarine;
-}
-
-header > h1 {
-  float: left;
-  margin: 0;
-  width: 30%;
+  padding: 20px 100px;
 }
 
 header > nav {
   display: flex;
   flex-direction: row-reverse;
-  width: 70%;
 }
 
 nav a {
@@ -32,6 +25,7 @@ nav a {
   text-decoration: none;
   font-size: 20px;
   border-radius: 10px;
+  color: black;
 }
 
 nav a:hover {
@@ -39,52 +33,52 @@ nav a:hover {
 }
 
 main {
-  position: absolute;
-  margin-top: 120px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 80px 0;
+  padding: 20px 150px;
 }
 
-.wrapper > div {
+main h1 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.project {
+  width: 100%;
+  height: 100%;
   border: 2px solid rgba(121, 116, 116, 0.5);
   border-radius: 10px;
   background-color: rgba(219, 219, 219, 0.5);
-  padding: 2em;
+  padding: 1.5rem;
   color: #d4a693;
 }
 
-.wrapper {
-  padding: 0 50px;
-  display: grid;
-  width: 70%;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 30px;
-  gap: 30px;
-  grid-auto-rows: minmax(300px, auto);
+.project a {
+  display: inline-block;
+  font-size: 2rem;
+  text-decoration: none;
   text-align: center;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.project a:hover {
+  text-decoration: underline;
 }
 
 img {
   width: 100%;
   height: 80%;
   border-radius: 10px;
-  margin-bottom: 20px;
   transition: transform 0.5s ease-in-out;
 }
 
 img:hover {
   transform: scale(1.1);
-}
-
-main a {
-  display: inline-block;
-  font-size: 30px;
-  text-decoration: none;
-  color: black;
-}
-
-main a:hover {
-  text-decoration: underline;
 }
