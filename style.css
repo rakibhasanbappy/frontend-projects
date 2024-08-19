@@ -1,9 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.barlow-bold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  font-family: Barlow, sans-serif;
+}
+
+.html,
+.css,
+.js {
+  background-color: transparent;
+  color: rgb(106, 190, 205);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0px;
+}
+
+.css {
+  color: rgb(62, 84, 163);
+}
+
+.js {
+  color: rgb(207, 99, 144);
 }
 
 header {
@@ -33,7 +60,6 @@ nav a:hover {
 }
 
 main {
-  margin: 80px 0;
   padding: 20px 150px;
 }
 
@@ -42,11 +68,20 @@ main h1 {
   text-align: center;
 }
 
+.webpages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .project {
@@ -77,8 +112,68 @@ img {
   height: 80%;
   border-radius: 10px;
   transition: transform 0.5s ease-in-out;
+  object-fit: contain;
 }
 
 img:hover {
   transform: scale(1.1);
+}
+
+ul {
+  display: inline-flex;
+  list-style: none;
+  gap: 1rem;
+  justify-content: start;
+  padding: 0;
+}
+
+/* Responsive Design for Desktop */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .webpages {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive Design for Tablet */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  header {
+    padding: 20px 50px;
+    flex-direction: column;
+  }
+
+  main {
+    padding: 20px 50px;
+  }
+
+  .webpages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 576px) {
+  header {
+    padding: 20px 20px;
+    flex-direction: column;
+  }
+
+  main {
+    padding: 20px 20px;
+  }
+
+  .webpages {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
